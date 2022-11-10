@@ -27,4 +27,4 @@ Keyword const dan final sama-sama digunakan untuk membuat suatu variabel bersifa
  5. Mengatur tampilan button dengan widget Padding
  6. Membuat Text 'GENAP' yang akan muncul jika counter bernilai genap dan Text 'GANJIL' jika counter bernilai ganjil
  7. Menambahkan style pada Text
- 8. Menghilangkan Button _decrement_ jika counter mencapai 0 dengan conditional untuk Button decrement
+ 8. Menghilangkan button _decrement_ jika counter mencapai 0 dengan conditional
