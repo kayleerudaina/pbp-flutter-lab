@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:counter_7/drawer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,18 +12,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Lab',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Program Counter'),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
+  const MyHomePage({super.key});
+  final String title = 'Program Counter';
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -51,6 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
+      drawer: buildDrawer(context), // Menambahkan drawer
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -80,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             if (_counter>0)
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal:350),
+              padding: const EdgeInsets.symmetric(horizontal:50),
               child: FloatingActionButton(
                 onPressed: _decrementCounter,
                 tooltip: 'Decrement',
@@ -89,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Padding (
-              padding: const EdgeInsets.symmetric(horizontal:350),
+              padding: const EdgeInsets.symmetric(horizontal:50),
               child: FloatingActionButton(
                 onPressed: _incrementCounter,
                 tooltip: 'Increment',
