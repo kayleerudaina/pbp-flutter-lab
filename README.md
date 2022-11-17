@@ -44,6 +44,7 @@ Navigator.push digunakan untuk menambahkan rute lain ke dalam stack saat ini. Ha
 - ListTile, satu row yang bisa mengandung teks
 - Drawer, sebuah menu yang tersembunyi
 - Form, menunjukkan suatu Form
+- ListView, mengandung widget di setiap row
 
 ## Jenis-jenis event pada Flutter
 - onPressed, ketika User menekan Button
