@@ -62,3 +62,28 @@ Navigator digunakan untuk menampilkan konten ke halaman baru. Ketika menggunakan
 4. Membuat budget.dart untuk menampilkan data yang sudah diisi dalam form
 5. Budget ditampilkan dalam bentuk card yang tersusun
 6. Menambahkan drawer yang sudah dibuat ke masing-masing page dengan `drawer: buildDrawer(context)`
+
+# Tugas 9 PBP
+### Pengambilan data JSON
+Kita dapat melakukan pengambilan data JSON tanpa membuat model terlebih dahulu. Karena pada dasarnya, JSON merupakan objek JavaScript yang ekuivalen dengan `Map` dalam Dart. Namun,  lebih baik membuat model terlebih dahulu untuk meminimalisir kesalahan pengambilan atau pengiriman data melalui HTTP requiest yang akan ditampilkan pada aplikasi.
+
+### Widget yang digunakan 
+- Scaffold, widget untuk mengatur tampilan suatu page secara keseluruhan
+- FutureBuilder, widget yang dibangun tergantung dengan interaksi snapshot dengan Future, digunakan untuk pengambilan data asinkronus
+- ListView.builder, list Widget yang dapat di-_scroll_
+(lanjutan dari tugas sebelumnya)
+- Padding, memberikan jarak antar Widget
+- Checkbox, sebuah widget utnuk menunjukkan checkbox yang dapat dicentang
+- Container, widget untuk menampung widget lainnya berguna untuk _positioning_ dan _sizing_
+
+### Mekanisme pengambilan data dari JSON
+Pengambilan data dapat dilakukan dengan HTTP request seperti GET, POST secara async. Data JSON yang diambil akan dilakukan parsing dengan `jsonDecode()` untuk decode data JSON menjadi object Dart. Data JSON yang diambil kemudian bisa ditampilkan menggunakan widget FutureBuilder ayng dapat mengambil data secara asinkronus
+
+### Cara implementasi
+1. _Refactor_ file dengan memindahkan file ke folder sesuai dengan kegunaannya
+2. Mengambil model MyWatchlist dari data JSON pada Tugas 3 dari `https://newappmvt.herokuapp.com/mywatchlist/json/`
+3. Membuat model baru MyWatchlist
+4. Melakukan pengambilan data JSON
+5. Membuat page baru untuk My Watchlist 
+6. Menambahkan routing pada drawer
+7. Membuat page yang bisa menampilkan detail dari masing-masing elemen pada List MyWatchlist
