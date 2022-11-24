@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
-import 'package:counter_7/form.dart';
-import 'package:counter_7/budget.dart';
+import 'package:counter_7/page/form.dart';
+import 'package:counter_7/page/budget.dart';
+import 'package:counter_7/page/mywatchlist_page.dart';
 
 Drawer buildDrawer(BuildContext context) {
   return Drawer(
@@ -34,6 +35,16 @@ Drawer buildDrawer(BuildContext context) {
             Navigator.pushReplacement(
               context,
               MaterialPageRoute(builder: (context) => const DataBudgetPage()),
+            );
+          },
+        ),
+        // Button ke page Mywatchlist
+        ListTile(
+          title: const Text('My Watchlist'),
+          onTap: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const MyWatchlistPage()),
             );
           },
         ),
